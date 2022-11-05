@@ -89,8 +89,75 @@ check each word in dictionary for matches
 if match, [:ditionaryword] ++
 reutrn has
 
+STOCK PICKER
+### This one was difficult. As you can see, I tried approaching this from multiple angles before finding a solution
+
+take an array of prices - 1 for each day - return the day(index) of the lowest buy price and highest sell price
+
+init array of prices
+index of array minimum
+return as first result
+find index of array maximum
+return as second result
+
+result = [array.index(array.min), array.index(array.max)]
+
+#wrong because You need to buy before you can sell
+
+take an array of each price for each day
+return the pair of days which:
+has the largest difference && lower price index < highest price index
 
 
 
 
+store largest difference in hash[largest_difference] = [index of first value, index of second value]
 
+find the smallest day which has the largest possible day after it?
+
+
+find array.min
+find array.max
+is index of array.min < index of array.max
+if no 
+find array.
+
+Implement a method #stock_picker that takes in an array of stock prices, one for each hypothetical day. It should return a pair of days representing the best day to buy and the best day to sell. Days start at 0.
+
+
+from an array of numbers find the biggest difference for which the smaller number comes below the biggest number
+
+find the smallest number
+find the biggest number 
+if smallest number comes before biggest number, done
+else find the next smallest number
+find the next biggest number 
+check if smallest is before biggest
+
+find the smallest number
+find the biggest number 
+{a.min
+a.max}
+if smallest number comes before biggest number
+{a.index(a.min) <a.index(a.max)? false}
+a.shift
+if true
+return [smallest, biggest]
+
+a.each do |number|
+unless a.index(a.min) < a.index(a.max)
+a.pop
+else
+return [a.index(a.min), a.index(a.max)]
+
+#NOPE!
+
+
+reduce(hash) {|hash, number|}
+  for each value whose index is > index.number |value_after_n|
+  if value_after_n > number
+  hash[value_after_n - number] = [array.index(number), array.index(value_after_n)]
+  return hash
+  
+  
+  hash.keys.max
