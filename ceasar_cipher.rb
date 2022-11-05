@@ -1,11 +1,9 @@
-
-
 def numberize_shift(shift_input)
     while (/\D/ =~ shift_input) != nil do
       puts "not a number. try again"
       shift_input = gets.chomp
     end
-    return shift_input.to_i
+    shift_input.to_i
   end
   
 def wrap_z_to_a (index)
@@ -16,7 +14,7 @@ end
 def encrypt(original_message, alphabet, shift)
   original_message.map do |letter|
     unless alphabet.index(letter.downcase) == nil
-      index = wrap_z_to_a( alphabet.index(letter.downcase) + shift )
+      index = wrap_z_to_a(alphabet.index(letter.downcase) + shift)
       letter = alphabet.at(index)
     else
       letter
@@ -41,6 +39,6 @@ array_to_convert = gets.chomp.split("")
 puts "Please type shift value:"
 shift = numberize_shift(gets.chomp)
   
-encrypted_array = check_for_upcase( array_to_convert, encrypt( array_to_convert, alphabet, shift))
+encrypted_array = check_for_upcase(array_to_convert, encrypt(array_to_convert, alphabet, shift))
   
 puts encrypted_array.join
