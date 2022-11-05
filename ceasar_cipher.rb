@@ -1,4 +1,4 @@
-require "pry-byebug"
+
 
 def numberize_shift(shift_input)
     while (/\D/ =~ shift_input) != nil do
@@ -17,7 +17,6 @@ def numberize_shift(shift_input)
     original_message.map do |letter|
     unless alphabet.index(letter.downcase) == nil
      index = wrap_z_to_a( alphabet.index(letter.downcase) + shift )
-     #binding.pry
      letter = alphabet.at(index)
     else
      letter
