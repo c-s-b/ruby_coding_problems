@@ -161,3 +161,34 @@ reduce(hash) {|hash, number|}
   
   
   hash.keys.max
+
+
+
+BUBBLE SORT
+
+check each value in an array to see if > next value. 
+  if yes swapcurrent and next value and repeat
+  if no move to the next value
+  
+  loop until sorted
+  
+  
+reduce do |current_element, next_element|
+    if current_element > next_element
+	
+	
+while swap_count > 0
+swap_count = 0
+for each_with_index element in array
+unless element == a.last
+  if element > a[index + 1]
+  a.delete(element)
+  a.insert(index +1, element)
+  swap_count +=1
+  end
+  end
+  
+  loop1
+  [4,3,78,2,0,2]
+  [3,4,78,2,0,2]
+  [3,4,2,78,0,2]
